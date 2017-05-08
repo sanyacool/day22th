@@ -7,10 +7,6 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/asd', function(req, res){
-  res.sendFile(__dirname + '/spr.PNG');
-});
-
 var users = {}; 
 io.on('connection', function(client){
 	/*socket.on('button clicked', function(val){
