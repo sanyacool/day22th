@@ -82,8 +82,9 @@
 				createjs.Tween
 					.get(window[UserId], { loop: false })
 					.to({ x: Math.round(window[UserId].x) + ((evt.stageX - (Math.round(window[UserId].x)))/10) , y: Math.round(window[UserId].y) + ((evt.stageY - Math.round(window[UserId].y))/5)}, 100);
+				socket.emit('moving done', window[UserId].x, window[UserId].y);
 				});
-			socket.emit('moving done', window[UserId].x, window[UserId].y);
+			//socket.emit('moving done', window[UserId].x, window[UserId].y);
 			//}); 
 		});
 		
