@@ -88,6 +88,10 @@
 			//}); 
 		});
 		
+		socket.on('moving done', function(coordx,coordy, userid){
+			CreateSprite(userid,coordx,coordy);
+		});
+		
 		createjs.Ticker.setFPS(60);
 		createjs.Ticker.addEventListener("tick", stage);
 		
