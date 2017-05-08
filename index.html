@@ -89,8 +89,10 @@
 		});
 		
 		socket.on('moving done', function(coordx,coordy, userid){
-			CreateSprite(userid,coordx,coordy);
+			window[userid].x = coordx;
+			window[userid].y = coordy;
 		});
+	
 		
 		createjs.Ticker.setFPS(60);
 		createjs.Ticker.addEventListener("tick", stage);

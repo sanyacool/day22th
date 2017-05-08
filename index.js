@@ -24,10 +24,8 @@ io.on('connection', function(client){
 
 	client.emit('moving', client.id);
 	client.on('moving done', function(coordx, coordy){
-		users[client.id] = {
-			x: coordx,
-			y: coordy
-		}
+		users[client.id].x = coordx;
+		users[client.id].y = coordy;
 		client.broadcast.emit('moving done', coordx, coordy, client.id)
 	});
 	
