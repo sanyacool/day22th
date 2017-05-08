@@ -28,7 +28,7 @@ io.on('connection', function(client){
 			x: coordx,
 			y: coordy
 		}
-		client.broadcast.emit('user done', coordx, coordy, client.id)
+		client.broadcast.emit('moving done', coordx, coordy, client.id)
 	});
 	
 	client.on('disconnect', function(){
